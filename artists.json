@@ -1,0 +1,10 @@
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e543"},"name":"Queen","dateOfBirth":{"$date":{"$numberLong":"-736041600000"}},"genres":["Rock"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e544"},"name":"Eagles","dateOfBirth":{"$date":"1971-02-18T00:00:00Z"},"genres":["Rock"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e545"},"name":"John Lennon","dateOfBirth":{"$date":{"$numberLong":"-922406400000"}},"genres":["Rock","Pop"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e546"},"name":"Michael Jackson","dateOfBirth":{"$date":{"$numberLong":"-357955200000"}},"genres":["Pop","R&B"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e547"},"name":"The Beatles","dateOfBirth":{"$date":{"$numberLong":"-297216000000"}},"genres":["Rock","Pop"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e548"},"name":"Led Zeppelin","dateOfBirth":{"$date":{"$numberLong":"-40003200000"}},"genres":["Rock"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e549"},"name":"The Dandy Warhols","dateOfBirth":{"$date":"1994-01-01T00:00:00Z"},"genres":["Alternative Rock"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e54a"},"name":"Imagine Dragons","dateOfBirth":{"$date":"2008-01-01T00:00:00Z"},"genres":["Pop Rock","Indie Rock"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e54b"},"name":"Nirvana","dateOfBirth":{"$date":"1987-01-01T00:00:00Z"},"genres":["Grunge","Alternative Rock"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e54c"},"name":"Guns N' Roses","dateOfBirth":{"$date":"1985-03-26T00:00:00Z"},"genres":["Hard Rock"]}

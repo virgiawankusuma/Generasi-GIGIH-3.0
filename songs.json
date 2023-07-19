@@ -1,0 +1,10 @@
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e539"},"title":"Under Preasure","artists":["Queen"],"album":"Hot Space","artist":["Queen","David Bowie"]}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e53a"},"title":"Hotel California","artists":["Eagles"],"album":"Hotel California"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e53b"},"title":"Imagine","artists":["John Lennon"],"album":"Imagine"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e53c"},"title":"Thriller","artists":["Michael Jackson"],"album":"Thriller"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e53d"},"title":"Hey Jude","artists":["The Beatles"],"album":"The Beatles (The White Album)"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e53e"},"title":"Stairway to Heaven","artists":["Led Zeppelin"],"album":"Led Zeppelin IV"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e53f"},"title":"Bohemian Like You","artists":["The Dandy Warhols"],"album":"Thirteen Tales from Urban Bohemia"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e540"},"title":"Imagine Dragons","artists":["Radioactive"],"album":"Night Visions"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e541"},"title":"Smells Like Teen Spirit","artists":["Nirvana"],"album":"Nevermind"}
+{"_id":{"$oid":"64b7d7662f0ce4ad0530e542"},"title":"Sweet Child O' Mine","artists":["Guns N' Roses"],"album":"Appetite for Destruction"}
