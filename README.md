@@ -3,7 +3,7 @@
 > Generasi GIGIH was designed by the GoTo Impact Foundation (previously: Yayasan Anak Bangsa Bisa) and GoTo as a solution for young Indonesian tech talent to keep up with the rapidly growing technology industry. Through competency training and the right way of thinking, we aim to produce critical, persistent, resilient and highly competitive technology talent. , so as to be able to face future challenges. This program is expected to help accelerate digital transformation while at the same time making technology a carrier of positive change in Indonesia. PERISTENT generation, going beyond limits to make changes.
 
 ## Table of Contents
-This repository is used to store all the tasks that I have done during the Generasi GIGIH 3.0 program.
+This repository is used to store all the tasks that I have done during the Generasi GIGIH 3.0 program Full Stack Engineering Path.
 
 ### Module 2: Backend Development With Node JS and Express JS
 - [**Module 2.1**: Introduction To Server Side Development With Node JS.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-2.1)
