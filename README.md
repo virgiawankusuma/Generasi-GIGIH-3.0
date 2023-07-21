@@ -17,3 +17,4 @@ This repository is used to store all the tasks that I have done during the Gener
   - [**Homework**: Create a database that stores the following information.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-3.1-homework)
 - **Module 3.2**: MongoDB Basics.
 - **Module 3.3**: Integrating MongoDB with NodeJS.
+  - [**Mid Term Full Stack Engineering.**](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/mid-term-full-stack-engineering)
