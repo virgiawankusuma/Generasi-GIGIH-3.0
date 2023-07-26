@@ -5,6 +5,8 @@
 ## Table of Contents
 This repository is used to store all the tasks that I have done during the Generasi GIGIH 3.0 program Full Stack Engineering Path.
 
+### Module 1: Fundamentals of Javascript
+- [**Module 1.3**: Git & CSS.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-1.3)
 ### Module 2: Backend Development With Node JS and Express JS
 - [**Module 2.1**: Introduction To Server Side Development With Node JS.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-2.1)
 - [**Module 2.2**: Backend Development With ExpressJS.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-2.2)
@@ -18,3 +20,7 @@ This repository is used to store all the tasks that I have done during the Gener
 - **Module 3.2**: MongoDB Basics.
 - **Module 3.3**: Integrating MongoDB with NodeJS.
   - [**Mid Term Full Stack Engineering.**](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/mid-term-full-stack-engineering)
+### Module 4: React Basic
+- [**Module 4.1**: Introduction to React.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-4.1)
+  - [**Exercise/Homework**: Slicing Clone Spotify UI from Module 1.3 (HTML+ CSS) to React.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/module-4.1-excercise)
+- [**Module 4.2**: Component Part 2, Props, and Conditional Rendering.](https://github.com/virgiawankusuma/Generasi-GIGIH-3.0/tree/36a658850981d4a0766107e9fbe158d54ffbae09)
