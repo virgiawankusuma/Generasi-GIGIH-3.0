@@ -33,6 +33,7 @@ export default function Playlist({ playlist }: { playlist: ISongProps[] }) {
           ))}
         </tbody>
       </table>
+      <button className="mt-4 px-4 py-2 bg-primary font-semibold md:text-lg text-white rounded-full hover:bg-primary/80 transition duration-300 ease-in-out">Save Playlist</button>
     </section>
   );
 }

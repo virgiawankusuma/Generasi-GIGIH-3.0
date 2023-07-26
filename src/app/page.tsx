@@ -28,10 +28,16 @@ export default function Home() {
 
     <div className="py-4 md:py-8"/>
 
-    <h1 className="text-3xl font-bold mb-4 md:mb-6">My Playlist</h1>
-    <Playlist
-      playlist={playlist}
-    />
+    {
+      playlist.length > 0 && (
+        <>
+          <h1 className="text-3xl font-bold mb-4 md:mb-6">My Playlist</h1>
+          <Playlist
+            playlist={playlist}
+          />
+        </>
+      )
+    }
    </main> 
   )
 }
