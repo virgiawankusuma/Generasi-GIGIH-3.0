@@ -2,7 +2,6 @@ import { ISongProps } from '@/types/songProps';
 import SongItem from './SongItem';
 
 export default function SongList({ playlist, setPlaylist }: { playlist: ISongProps[], setPlaylist: any }) {
-  
   const songs = [
     {
       id: 0,
