@@ -5,7 +5,7 @@ import { FaAngleLeft, FaSearch } from 'react-icons/fa';
 export default function TopBar() {
   return (
     <div
-      className="flex gap-x-2 justify-between items-center w-full px-4 py-2 fixed top-0 left-0 z-50"
+      className="absolute flex gap-x-2 justify-between items-center container px-4 py-2 top-0 right-0 z-50"
     >
       <div className="flex justify-between items-center gap-x-2">
         <Link
