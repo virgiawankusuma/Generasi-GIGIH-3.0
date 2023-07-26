@@ -1,11 +1,26 @@
 const comment = require('../models/Comments');
+const videoThumbnailList = require('../models/VideoThumbnail');
 
 const getComments = async (req, res) => {
   try {
-    const comments = await comment.getComments();
+    const comments = await comment.find({});
     res.json(comments);
   } catch (error) {
     res.status(500).json({ message: 'Error retrieving comments', error });
+  }
+}
+
+const getCommentByVideoID = async (req, res) => {
+  try {
+    const { VideoID } = req.params;
+
+    const videoThumbnail = await videoThumbnailList.findOne({ VideoID });
+    const comments = await comment.find({ VideoID: videoThumbnail.VideoID });
+
+    res.json(comments);
+    
+  } catch (error) {
+    res.status(500).json({ message: 'Error retrieving comment', error });
   }
 }
 
@@ -20,18 +35,27 @@ const submitComment = async (req, res) => {
                 });
     }
 
-    const newComment = new Comment({
+    const newComment = new comment({
       Username,
       Comment,
       VideoID,
     });
 
+    res.json(newComment);
+
     await newComment.save();
 
-    res.json({ success: true, message: 'Comment submitted successfully.' });
+    res.json({ 
+      success: true, 
+      message: 'Comment submitted successfully.' 
+    });
   } catch (error) {
-    res.status(500).json({ message: 'Error submitting comment', error });
+    res.status(500).json({ message: 'Failed to submit comment', error });
   }
 };
 
-module.exports = { getComments, submitComment };
+module.exports = { 
+  getComments, 
+  getCommentByVideoID,
+  submitComment 
+};
