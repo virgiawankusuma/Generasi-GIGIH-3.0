@@ -16,16 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex">
-        <div className="w-1/5">
-          <SideBar />
-        </div>
-        <div className="w-[80%] mt-2 relative">
-          <TopBar />
-          <main className="mt-16 container px-4 m-2">
-            {children}
-          </main>
-        </div>
+      <body>
+        <TopBar />
+        {children}
       </body>
     </html>
   )

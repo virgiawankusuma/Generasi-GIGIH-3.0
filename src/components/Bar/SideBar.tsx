@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaHome, FaStar, FaSearch } from 'react-icons/fa';
+import { FaHome, FaStar } from 'react-icons/fa';
 
 export default function SideBar() {
   return (
@@ -10,13 +10,6 @@ export default function SideBar() {
       >
         <FaHome />
         <span className="text-base">Home</span>
-      </Link>
-      <Link 
-        href={'/'}
-        className="flex items-center gap-x-2 px-3 py-2 mb-3 rounded-xl hover:bg-light/10 transition duration-300 ease-in-out"
-      >
-        <FaSearch />
-        <span className="text-base">Search</span>
       </Link>
       <Link 
         href={'/'}
