@@ -24,7 +24,7 @@ const productListRoutes = require('./routes/productListRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 
 app.use('/video-thumbnails', videoThumbnailRoutes);
-app.use('/product-list', productListRoutes);
+app.use('/products', productListRoutes);
 app.use('/comments', commentRoutes);
 
 // Start the server
