@@ -1,7 +1,7 @@
 import CardImage from './CardImage';
 import CardText from './CardText';
 
-export default function Card() {
+export default function Card({name, gender}:{name:string, gender:string}) {
   return(
     <div
       style={{
@@ -15,7 +15,10 @@ export default function Card() {
       }}
     >
       <CardImage />
-      <CardText />
+      <CardText 
+        name={name}
+        gender={gender}
+      />
     </div>
   )
 }
