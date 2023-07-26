@@ -10,8 +10,8 @@ const commentSchema = new mongoose.Schema({
     required: [true, 'Comment is required'],
   },
   Timestamp: {
-    type: String,
-    required: [true, 'Timestamp is required'],
+    type: Date,
+    default: Date.now,
   },
   VideoID: {
     type: String,
