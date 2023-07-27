@@ -4,9 +4,12 @@ const videoThumbnailList = require('../models/VideoThumbs');
 const getComments = async (req, res) => {
   try {
     const comments = await comment.find({});
-    res.json(comments);
+    res.status(200).json(comments);
   } catch (error) {
-    res.status(500).json({ message: 'Error retrieving comments', error });
+    res.status(500).json({ 
+      message: 'Error retrieving comments', 
+      error 
+    });
   }
 }
 
@@ -17,10 +20,13 @@ const getCommentByVideoID = async (req, res) => {
     const videoThumbnail = await videoThumbnailList.findOne({ VideoID });
     const comments = await comment.find({ VideoID: videoThumbnail.VideoID });
 
-    res.json(comments);
+    res.status(200).json(comments);
     
   } catch (error) {
-    res.status(500).json({ message: 'Error retrieving comment', error });
+    res.status(500).json({ 
+      message: 'Error retrieving comment', 
+      error 
+    });
   }
 }
 
@@ -29,10 +35,9 @@ const submitComment = async (req, res) => {
     const { Username, Comment, VideoID } = req.body;
     
     if (!Username || !Comment || !VideoID) {
-      return res.status(400)
-                .json({
-                  message: 'Username, Comment, and VideoID are required fields.' 
-                });
+      return res.status(400).json({
+        message: 'Username, Comment, and VideoID are required fields.' 
+      });
     }
 
     const newComment = new comment({
@@ -45,12 +50,14 @@ const submitComment = async (req, res) => {
 
     await newComment.save();
 
-    res.json({ 
+    res.status(201).json({
       success: true, 
       message: 'Comment submitted successfully.' 
     });
   } catch (error) {
-    res.status(500).json({ message: 'Failed to submit comment', error });
+    res.status(500).json({
+      message: 'Failed to submit comment', error
+    });
   }
 };
 
