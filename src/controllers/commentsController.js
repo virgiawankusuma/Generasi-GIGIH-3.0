@@ -1,5 +1,5 @@
 const comment = require('../models/Comments');
-const videoThumbnailList = require('../models/VideoThumbnail');
+const videoThumbnailList = require('../models/VideoThumbs');
 
 const getComments = async (req, res) => {
   try {

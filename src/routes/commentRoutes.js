@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const commentController = require('../controllers/commentController');
+const commentsController = require('../controllers/commentsController');
 
-router.get('/', commentController.getComments);
-router.get('/:VideoID', commentController.getCommentByVideoID);
-router.post('/', commentController.submitComment);
+router.get('/', commentsController.getComments);
+router.get('/:VideoID', commentsController.getCommentByVideoID);
+router.post('/', commentsController.submitComment);
 
 module.exports = router;

@@ -1,9 +1,9 @@
-const productList = require('../models/Products');
-const videoThumbnailList = require('../models/VideoThumbnail');
+const product = require('../models/Products');
+const videoThumbs = require('../models/VideoThumbs');
 
 const getProducts = async (req, res) => {
   try {
-    const products = await productList.find({});
+    const products = await product.find({});
     res.json(products);
   } catch (error) {
     res.status(500).json({ message: 'Error retrieving products', error });
@@ -13,9 +13,9 @@ const getProducts = async (req, res) => {
 const getProductByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
-    
-    const videoThumbnail = await videoThumbnailList.findOne({ VideoID });
-    const products = await productList.find({ ProductID: videoThumbnail.VideoID });
+
+    const videoThumbnail = await videoThumbs.findOne({ VideoID });
+    const products = await product.find({ VideoID: videoThumbnail.VideoID });
 
     res.json(products);
 
