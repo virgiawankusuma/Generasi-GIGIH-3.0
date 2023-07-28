@@ -19,8 +19,9 @@ const productSchema = new mongoose.Schema({
   },
   VideoID: { 
     type: String, 
+    ref: 'video_thumbs',
     required: [true, 'Video ID is required'],
-  }, // Reference to the associated video's VideoID
+  },
 });
 
 const Product = mongoose.model('products', productSchema);
