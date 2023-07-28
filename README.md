@@ -1,10 +1,54 @@
+# Database Structure
+This Dataasbe have 3 Collections with specific document:
+## Video Thumbnails
+```javascript
+{
+  _id: ObjectId // Auto generated
+  VideoID: string
+  Url: string
+}
+```
+## Comments
+```javascript
+{
+  _id: ObjectId // Auto generated
+  Username: string
+  Comment: string
+  Timestamp: string
+  VideoID: string // Reference to video_thumbs.VideoID
+}
+```
+
+## Products
+```javascript
+{
+  _id: ObjectId // Auto generated
+  ProductID: string
+  Link: string
+  Title: string
+  Price: float(2),
+  VideoID: string // Reference to video_thumbs.VideoID
+}
+```
 # How to run the project
 1. clone this repo with the specified branch name with the following command `git clone -b mid-term-full-stack-engineering <this-repo-url>`
 2. Run `npm install` to install all dependencies first.
 3. Create a `.env` file in the root directory of the project with `.env.example` as a template.
 4. Run `npm start` to start the server.
+   
+# API Structure
+## List of API
+| Method | Path | Description |
+| ------ | ---- | ----------- |
+| GET | /products | Get all products |
+| GET | /products/:VideoID | Get a product by VideoID |
+| GET | /video-thumbs | Get all video thumbnails |
+| GET | /comments | Get all comments |
+| GET | /comments/:VideoID | Get a comment by VideoID |
+| POST | /comments | Submit a comment |
 
-# Product List
+# List API Request and Response
+## Product List
 * Product object
   ```javascript
   {
@@ -15,7 +59,7 @@
     VideoID: string // Reference to video_thumbs.VideoID
   }
   ```
-**GET /products**
+### **GET /products**
 ----
   Returns all products in the system.
 * **URL Params**  
@@ -49,7 +93,7 @@
     ```
 
 
-**GET /products/:VideoID**
+### **GET /products/:VideoID**
 ----
   Returns the specified product.
 * **URL Params**  
@@ -71,7 +115,7 @@
     }
     ```
 
-# Video Thumbnail List
+## Video Thumbnail List
 * Video Thumbnail List object
   ```javascript
   {
@@ -79,7 +123,7 @@
     Url: string
   }
   ```
-**GET /video-thumbs**
+### **GET /video-thumbs**
 ----
   Returns all video thumbnails in the system.
 * **URL Params**  
@@ -112,7 +156,7 @@
   }
   ```
 
-# Comment List
+## Comment List
 * Comment object
   ```javascript
   {
@@ -122,7 +166,7 @@
     VideoID: string // Reference to video_thumbs.VideoID
   }
   ```
-**GET /comments**
+### **GET /comments**
 ----
   Returns all comments in the system.
 * **URL Params**  
@@ -155,7 +199,7 @@
     }
     ```
 
-**GET /comments/:VideoID**
+### **GET /comments/:VideoID**
 ----
   Returns the specified product.
 * **URL Params**  
@@ -185,7 +229,7 @@
     VideoID: string // Reference to video_thumbs.VideoID
   }
   ```
-**POST /comments**
+### **POST /comments**
 ----
   Creates a new comment in the system.
 * **URL Params**  
