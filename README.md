@@ -38,14 +38,14 @@ This Dataasbe have 3 Collections with specific document:
    
 # API Structure
 ## List of API
-| Method | Path | Description |
-| ------ | ---- | ----------- |
-| GET | /products | Get all products |
-| GET | /products/:VideoID | Get a product by VideoID |
-| GET | /video-thumbs | Get all video thumbnails |
-| GET | /comments | Get all comments |
-| GET | /comments/:VideoID | Get a comment by VideoID |
-| POST | /comments | Submit a comment |
+| Method | Path | Params | Description |
+| ------ | ---- | ------ | ----------- |
+| GET | /products | None | Returns all products in the system. |
+| GET | /products/:VideoID | VideoID=[string] | Returns the specified product. |
+| GET | /video-thumbs | None | Returns all video thumbnails in the system. |
+| GET | /comments | None | Returns all comments in the system. |
+| GET | /comments/:VideoID | VideoID=[string] | Returns the specified product. |
+| POST | /comments | None | Creates a new comment in the system. |
 
 # List API Request and Response
 ## Product List
