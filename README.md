@@ -1,3 +1,11 @@
+# Table of Contents
+1. [Database Structure](#database-structure)
+2. [API Structure](#api-structure)
+3. [List of API request and response](#list-api-request-and-response)
+4. [How to run the project](#how-to-run-the-project)
+
+---
+
 # Database Structure
 This Dataasbe have 3 Collections with specific document:
 ## Video Thumbnails
@@ -30,11 +38,6 @@ This Dataasbe have 3 Collections with specific document:
   VideoID: string // Reference to video_thumbs.VideoID
 }
 ```
-# How to run the project
-1. clone this repo with the specified branch name with the following command `git clone -b mid-term-full-stack-engineering <this-repo-url>`
-2. Run `npm install` to install all dependencies first.
-3. Create a `.env` file in the root directory of the project with `.env.example` as a template.
-4. Run `npm start` to start the server.
    
 # API Structure
 ## List of API
@@ -258,3 +261,9 @@ This Dataasbe have 3 Collections with specific document:
     error 
   }
   ```
+  
+# How to run the project
+1. clone this repo with the specified branch name with the following command `git clone -b mid-term-full-stack-engineering <this-repo-url>`
+2. Run `npm install` to install all dependencies first.
+3. Create a `.env` file in the root directory of the project with `.env.example` as a template.
+4. Run `npm start` to start the server.
