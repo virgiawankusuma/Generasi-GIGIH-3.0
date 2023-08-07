@@ -1,4 +1,8 @@
 export default function CardText({name, gender}:{name:string, gender:string}) {
+  const handleClick = (name: string) => {
+    alert(`Hello ${name}`);
+  }
+
   return(
     <div style={{
       display: 'flex',
@@ -6,15 +10,16 @@ export default function CardText({name, gender}:{name:string, gender:string}) {
       flexDirection: 'column',
       alignItems: 'flex-start'
     }}>
-      <p 
+      <button 
         style={{
           fontSize: '20px',
           fontWeight: 'bold',
           textAlign: 'left',
         }}
+        onClick={() => handleClick(name)}
       >
         {name}
-      </p>
+      </button>
       { 
         <p style={{color: `${gender === 'male' ? 'blue' : 'pink'}`}}>{gender}</p>
       }
