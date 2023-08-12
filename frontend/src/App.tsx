@@ -1,13 +1,13 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
+
+import Navigation from './common/Navigation';
 import Home from './pages/Home/page';
 import Videos from './pages/Videos/page';
 
 export default function App() {
   return (
     <>
-      <nav>
-        <Link to="/" className="nav-item">Home</Link>
-      </nav>
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="videos">

@@ -4,9 +4,27 @@
 
 @layer base {
   :root {
+    --color-background: 36 36 36;
     --color-primary: 0 170 91;
     --color-secondary: 201 253 224;
     --color-accent: 3 172 14;
     --color-dark: 28 82 83;
   }
+}
+
+body {
+  background: linear-gradient(
+    rgb(var(--color-background)) 0%,
+    rgb(var(--color-dark)) 54%,
+    rgb(var(--color-dark)) 100%
+  );
+  @apply min-h-screen text-white;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
 }
