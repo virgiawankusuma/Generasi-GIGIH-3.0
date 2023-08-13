@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useSearchParams } from 'react-router-dom';
 
-import Card from '../../common/Card';
+import Card from '../../components/Card';
 
 export default function Home() {
   const [searchParams] = useSearchParams('category');
