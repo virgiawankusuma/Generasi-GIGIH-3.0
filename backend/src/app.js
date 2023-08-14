@@ -12,20 +12,12 @@ mongoose.connect(mongoString, {
 
 const app = express();
 
-app.use(cors(
-  {
-    origin: 'http://localhost:3000',
+app.use(
+  cors({
+    origin: '*',
     credentials: true,
-  }
-  {
-    origin: 'http://localhost:5173',
-    credentials: true,
-  }
-  {
-    origin: 'https://generasi-gigih-3-0.vercel.app/',
-    credentials: true,
-  }
-));
+  })
+);
 app.use(express.json());
 
 // Check for DB connection
