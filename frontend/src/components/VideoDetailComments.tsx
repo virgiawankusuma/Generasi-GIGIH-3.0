@@ -1,15 +1,29 @@
 import { ICommentProps } from '../types/commentProps';
 import CommentCard from './CommentCard';
+import CommentForm from './CommentForm';
 
-export default function VideoDetailComments({ comments }: { comments: ICommentProps[] }) {
+interface IVideoDetailCommentsProps {
+  comments: ICommentProps[];
+  onAddComment: ({ username, comment }: { username: string, comment: string }) => void;
+}
+
+export default function VideoDetailComments({ comments, onAddComment }: IVideoDetailCommentsProps) {
   return (
     <section className="container xl:px-4 my-5">
       <div className="rounded-lg bg-gradient-to-b from-black/30 to-black/50 p-4">
         <h2 className="text-white text-lg sm:text-xl font-semibold mb-3">Comments</h2>
-        <div className="flex flex-wrap">
+        <CommentForm 
+          onAddComment={onAddComment}
+        />
+        <div className="flex flex-wrap mt-8">
           {
-            comments.map((comment) => (
-              <CommentCard key={comment._id} comment={comment} />
+            comments
+            .sort((a, b) => new Date(b.Timestamp).getTime() - new Date(a.Timestamp).getTime())
+            .map(comment => (
+              <CommentCard 
+                key={comment._id} 
+                comment={comment} 
+              />
             ))
           }
         </div>
