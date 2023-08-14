@@ -19,11 +19,11 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to database'));
 
 // Import routes
-const videoThumbsRoutes = require('./routes/videoThumbsRoutes');
+const videoRoutes = require('./routes/videosRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 
-app.use('/video-thumbs', videoThumbsRoutes);
+app.use('/videos', videoRoutes);
 app.use('/products', productsRoutes);
 app.use('/comments', commentRoutes);
 

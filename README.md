@@ -28,7 +28,7 @@ This Dataasbe have 3 Collections with specific document:
   Username: string
   Comment: string
   Timestamp: Date | string
-  VideoID: string // Reference to video_thumbs.VideoID
+  VideoID: string // Reference to videos.VideoID
 }
 ```
 
@@ -42,7 +42,7 @@ This Dataasbe have 3 Collections with specific document:
   Img: string
   Store: string
   Price: number
-  VideoID: string // Reference to video_thumbs.VideoID
+  VideoID: string // Reference to videos.VideoID
 }
 ```
    
@@ -52,7 +52,7 @@ This Dataasbe have 3 Collections with specific document:
 | ------ | ---- | ------ | ----------- |
 | GET | /products | None | Returns all products in the system. |
 | GET | /products/:VideoID | VideoID=[string] | Returns the specified product. |
-| GET | /video-thumbs | None | Returns all video thumbnails in the system. |
+| GET | /videos | None | Returns all video thumbnails in the system. |
 | GET | /comments | None | Returns all comments in the system. |
 | GET | /comments/:VideoID | VideoID=[string] | Returns the specified product. |
 | POST | /comments | None | Creates a new comment in the system. |
@@ -68,7 +68,7 @@ This Dataasbe have 3 Collections with specific document:
     Img: string
     Store: string
     Price: number
-    VideoID: string // Reference to video_thumbs.VideoID
+    VideoID: string // Reference to videos.VideoID
   }
   ```
 ### **GET /products**
@@ -127,8 +127,8 @@ This Dataasbe have 3 Collections with specific document:
     }
     ```
 
-## Video Thumbnail List
-* Video Thumbnail List object
+## Video List
+* Video List object
   ```javascript
   {
     VideoID: string
@@ -140,9 +140,9 @@ This Dataasbe have 3 Collections with specific document:
     Likes: number
   }
   ```
-### **GET /video-thumbs**
+### **GET /videos**
 ----
-  Returns all video thumbnails in the system.
+  Returns all video in the system.
 * **URL Params**  
   None
 * **Data Params**  
@@ -154,7 +154,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:**  
   ```
   {
-    video_thumbs: [
+    videos: [
             {<video_thumb_object>},
             {<video_thumb_object>},
             {<video_thumb_object>},
@@ -180,7 +180,7 @@ This Dataasbe have 3 Collections with specific document:
     Username: string
     Comment: string
     Timestamp: Date | string
-    VideoID: string // Reference to video_thumbs.VideoID
+    VideoID: string // Reference to videos.VideoID
   }
   ```
 ### **GET /comments**
@@ -243,7 +243,7 @@ This Dataasbe have 3 Collections with specific document:
   {
     Username: string
     Comment: string
-    VideoID: string // Reference to video_thumbs.VideoID
+    VideoID: string // Reference to videos.VideoID
   }
   ```
 ### **POST /comments**

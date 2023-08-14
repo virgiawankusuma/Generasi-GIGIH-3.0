@@ -15,7 +15,7 @@ const commentSchema = new mongoose.Schema({
   },
   VideoID: {
     type: String,
-    ref: 'video_thumbs',
+    ref: 'video_s',
     required: [true, 'Video ID is required'],
   },
 });

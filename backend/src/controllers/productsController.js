@@ -1,5 +1,5 @@
 const product = require('../models/Products');
-const videoThumbs = require('../models/VideoThumbs');
+const videos = require('../models/Videos');
 
 const getProducts = async (req, res) => {
   try {
@@ -14,7 +14,7 @@ const getProductByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
 
-    const videoThumbnail = await videoThumbs.findOne({ VideoID });
+    const videoThumbnail = await videos.findOne({ VideoID });
     const products = await product.find({ VideoID: videoThumbnail.VideoID });
 
     res.status(200).json(products);
