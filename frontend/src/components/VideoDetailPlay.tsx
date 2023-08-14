@@ -13,7 +13,7 @@ export default function VideoDetailPlay({ video, products }: IVideoDetailPlayPro
 
   return(
     <section className="container xl:px-4">
-      <div className="relative rounded-xl overflow-hidden shadow-lg mb-10 bg-black">
+      <div className="relative rounded-xl overflow-hidden shadow-lg mb-5 bg-black">
         <span className="absolute top-4 left-4 text-white text-xs sm:text-sm font-semibold bg-dark/30 p-1 rounded flex items-center">
           <FaEye className="text-sm sm:text-base mr-1" />{video?.Views}
         </span>
