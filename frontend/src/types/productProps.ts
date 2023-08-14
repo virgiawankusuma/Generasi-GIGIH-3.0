@@ -5,7 +5,7 @@ export interface IProductProps {
   Title: string;
   Img: string;
   Store: string;
-  Price: Float32Array;
+  Price: number;
   VideoID: string;
 }
 
@@ -16,6 +16,6 @@ export interface IProductCardProps {
   title: string;
   img: string;
   store: string;
-  price: Float32Array
+  price: number
   videoID: string;
 }

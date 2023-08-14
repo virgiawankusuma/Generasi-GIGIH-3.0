@@ -22,7 +22,7 @@ const productSchema = new mongoose.Schema({
     required: [true, 'Store is required'],
   },
   Price: {
-    type: Float32Array,
+    type: Number,
     required: [true, 'Price is required'],
   },
   VideoID: { 

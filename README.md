@@ -41,7 +41,7 @@ This Dataasbe have 3 Collections with specific document:
   Title: string
   Img: string
   Store: string
-  Price: Float32Array
+  Price: number
   VideoID: string // Reference to video_thumbs.VideoID
 }
 ```
@@ -67,7 +67,7 @@ This Dataasbe have 3 Collections with specific document:
     Title: string
     Img: string
     Store: string
-    Price: Float32Array
+    Price: number
     VideoID: string // Reference to video_thumbs.VideoID
   }
   ```
