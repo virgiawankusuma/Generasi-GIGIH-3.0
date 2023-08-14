@@ -15,7 +15,7 @@ export default function VideoDetailComments({ comments, onAddComment }: IVideoDe
         <CommentForm 
           onAddComment={onAddComment}
         />
-        <div className="flex flex-wrap mt-8">
+        <div className="flex flex-wrap mt-8 max-h-96 overflow-y-auto hide-scroll-bar gap-y-3">
           {
             comments
             .sort((a, b) => new Date(b.Timestamp).getTime() - new Date(a.Timestamp).getTime())
