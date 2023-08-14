@@ -7,8 +7,6 @@ import Videos from './pages/Videos/page';
 export default function App() {
   const location = useLocation();
   const VideoId = location.pathname.split("/")[2];
-
-  console.log(VideoId);
   
   return (
     <>
