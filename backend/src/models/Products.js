@@ -13,8 +13,16 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Title is required'],
   },
-  Price: {
+  Img: {
     type: String,
+    required: [true, 'Image is required'],
+  },
+  Store: {
+    type: String,
+    required: [true, 'Store is required'],
+  },
+  Price: {
+    type: Float32Array,
     required: [true, 'Price is required'],
   },
   VideoID: { 

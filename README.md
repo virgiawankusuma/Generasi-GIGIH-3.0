@@ -13,7 +13,12 @@ This Dataasbe have 3 Collections with specific document:
 {
   _id: ObjectId // Auto generated
   VideoID: string
+  Title: string
   Url: string
+  Store: string
+  Category: string
+  Views: number
+  Likes: number
 }
 ```
 ## Comments
@@ -22,7 +27,7 @@ This Dataasbe have 3 Collections with specific document:
   _id: ObjectId // Auto generated
   Username: string
   Comment: string
-  Timestamp: string
+  Timestamp: Date | string
   VideoID: string // Reference to video_thumbs.VideoID
 }
 ```
@@ -34,7 +39,9 @@ This Dataasbe have 3 Collections with specific document:
   ProductID: string
   Link: string
   Title: string
-  Price: float(2),
+  Img: string
+  Store: string
+  Price: Float32Array
   VideoID: string // Reference to video_thumbs.VideoID
 }
 ```
@@ -58,7 +65,9 @@ This Dataasbe have 3 Collections with specific document:
     ProductID: string
     Link: string
     Title: string
-    Price: float(2),
+    Img: string
+    Store: string
+    Price: Float32Array
     VideoID: string // Reference to video_thumbs.VideoID
   }
   ```
@@ -123,7 +132,12 @@ This Dataasbe have 3 Collections with specific document:
   ```javascript
   {
     VideoID: string
+    Title: string
     Url: string
+    Store: string
+    Category: string
+    Views: number
+    Likes: number
   }
   ```
 ### **GET /video-thumbs**
@@ -165,7 +179,7 @@ This Dataasbe have 3 Collections with specific document:
   {
     Username: string
     Comment: string
-    Timestamp: string
+    Timestamp: Date | string
     VideoID: string // Reference to video_thumbs.VideoID
   }
   ```
