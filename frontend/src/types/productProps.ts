@@ -3,6 +3,7 @@ export interface IProductProps {
   ProductID: string;
   Link: string;
   Title: string;
+  Img: string;
   Store: string;
   Price: number;
   VideoID: string;
@@ -13,6 +14,7 @@ export interface IProductCardProps {
   productID: string;
   link: string;
   title: string;
+  img: string;
   store: string;
   price: number;
   videoID: string;
