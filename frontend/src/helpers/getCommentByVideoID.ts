@@ -1,8 +1,9 @@
-import getAllComment from './getAllComment';
-
-export default function getCommentByVideoID(videoID: string | undefined) {
-  const comments = getAllComment();
-  const commentsByVideoID = comments.data.filter((comment) => comment.VideoID === videoID);
-
-  return commentsByVideoID;
+export default async function getCommentByVideoID(videoID: string | undefined) {
+  try {
+    const response = await fetch(`https://generasi-gigih-3-api.up.railway.app/comments/${videoID}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error("Error fetching comments");
+  }
 }

@@ -1,20 +1,32 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useSearchParams } from 'react-router-dom';
-import getAllVideo from '../../helpers/getAllVideo';
+import { useState, useEffect } from 'react';
+
+import { IVideoProps } from '../../types/videoProps';
+
+import getVideos from '../../helpers/getVideos';
 
 import Card from '../../components/Card';
 
 export default function Home() {
   const [searchParams] = useSearchParams('category');
-  const videos = getAllVideo();
+  const [videos, setVideos] = useState<IVideoProps[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await getVideos();
+      setVideos(response);
+    }
+    
+    fetchData();
+  }, []);
 
   return (
     <main className="container">
-      { videos.loading && <p>Loading...</p> }
       <section className="mt-4 mb-8 flex flex-wrap gap-4 lg:gap-3 xl:gap-4">
         {
           !searchParams.get("category") &&
-          videos.data.map(video => (
+          videos.map(video => (
             <Card
               key={video._id}
               videoID={video.VideoID}
@@ -28,9 +40,7 @@ export default function Home() {
         }
         {
           searchParams.get("category") &&
-          videos.data
-          .filter(video => video.Category === searchParams.get("category"))
-          .map(video => (
+          videos.filter(video => video.Category === searchParams.get("category")).map(video => (
             <Card
               key={video._id}
               videoID={video.VideoID}
