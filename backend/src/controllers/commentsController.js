@@ -1,5 +1,5 @@
 const comment = require('../models/Comments');
-const videoList = require('../models/Videos');
+const videos = require('../models/Videos');
 
 const getComments = async (req, res) => {
   try {
@@ -17,7 +17,7 @@ const getCommentByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
 
-    const video = await videoList.findOne({ VideoID });
+    const video = await videos.findOne({ VideoID });
     const comments = await comment.find({ VideoID: video.VideoID });
 
     res.status(200).json(comments);

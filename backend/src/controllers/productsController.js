@@ -14,8 +14,8 @@ const getProductByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
 
-    const videos = await videos.findOne({ VideoID: VideoID });
-    const products = await product.find({ VideoID: videos.VideoID });
+    const video = await videos.findOne({ VideoID });
+    const products = await product.find({ VideoID: video.VideoID });
 
     res.status(200).json(products);
 
