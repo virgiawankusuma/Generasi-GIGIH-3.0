@@ -30,21 +30,21 @@ export default function Navigation() {
           className={isActive('')}
           title="Semua"
         >
-          Semua
+          All
         </Link>
         <Link
           to="/?category=populer"
-          className={isActive('populer')}
-          title="Terbaru"
+          className={isActive('popular')}
+          title="Popular"
         >
-          Populer
+          Popular
         </Link>
         <Link
           to="/?category=terbaru"
-          className={isActive('terbaru')}
-          title="Terbaru"
+          className={isActive('latest')}
+          title="Latest"
         >
-          Terbaru
+          Latest
         </Link>
         <Link
           to="/?category=upcoming"
