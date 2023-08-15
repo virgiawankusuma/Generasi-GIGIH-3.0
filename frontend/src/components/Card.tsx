@@ -4,15 +4,16 @@ import { FaEye } from 'react-icons/fa';
 
 import type { IVideoCardProps } from '../types/videoProps';
 
-export default function Card({ videoID, title, thumbnailUrl, store, category, views }: IVideoCardProps) {
+export default function Card({ videoID, title, img, store, category, views }: IVideoCardProps) {
   const defaultThumb = '/img/default.png';
+  
   return (
     <Link 
       className="w-[calc((100%/2)-0.5rem)] bg-primary sm:w-[calc((100%/3)-0.7rem)] md:w-[calc((100%/4)-0.8rem)] lg:w-[calc((100%/5)-0.6rem)] xl:w-[calc((100%/6)-0.85rem)] relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[102%] group transition-all duration-300 ease-in-out"
       to={`/video/${videoID}`}
     >
       <img 
-        src={thumbnailUrl || defaultThumb} 
+        src={img || defaultThumb} 
         alt={title}
         className="w-full object-cover object-center"
       />

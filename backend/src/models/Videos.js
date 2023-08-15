@@ -29,6 +29,10 @@ const videoSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Likes is required'],
   },
+  Img: {
+    type: String,
+    required: [true, 'Img is required'],
+  },
 });
 
 const Video = mongoose.model('videos', videoSchema);

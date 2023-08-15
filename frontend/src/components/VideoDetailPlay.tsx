@@ -26,13 +26,14 @@ export default function VideoDetailPlay({ video, products }: IVideoDetailPlayPro
           />
           {video?.Views}
         </button>
-        <img 
-          src={video?.Url}
-          alt={video?.Title}
-          className="h-full object-cover object-center m-auto min-h-screen sm:min-h-[90vh] md:min-h-[80vh]"
+        <iframe
+          className="h-full w-full object-cover object-center m-auto min-h-screen sm:min-h-[90vh] md:min-h-[80vh]"
+          src={`${video?.Url}?controls=0&autoplay=1&showinfo=0&frameborder=0`}
+          title={video?.Title}
+          allowFullScreen
         />
         <div className="absolute bottom-0 left-0 w-full h-1/4 sm:h-1/3 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 ease-in-out flex justify-between p-2 md:p-3">
-          <div className="flex overflow-x-scroll hide-scroll-bar scroll-smooth gap-x-3 items-center">
+          <div className="flex justify-center  overflow-x-scroll hide-scroll-bar scroll-smooth gap-x-3 items-center">
             {
               products.map((product, index) => (
                 <Link 

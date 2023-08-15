@@ -31,7 +31,7 @@ export default function Home() {
               key={video._id}
               videoID={video.VideoID}
               title={video.Title}
-              thumbnailUrl={video.Url}
+              img={video.Img}
               store={video.Store}
               category={video.Category}
               views={video.Views}
@@ -45,7 +45,7 @@ export default function Home() {
               key={video._id}
               videoID={video.VideoID}
               title={video.Title}
-              thumbnailUrl={video.Url}
+              img={video.Img}
               store={video.Store}
               category={video.Category}
               views={video.Views}

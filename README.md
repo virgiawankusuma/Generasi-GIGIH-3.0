@@ -173,6 +173,7 @@ This Dataasbe have 3 Collections with specific document:
     Category: string
     Views: number
     Likes: number
+    Img: string
   }
   ```
 ### **GET /videos**
