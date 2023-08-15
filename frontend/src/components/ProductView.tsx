@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function ProductView({ product }: { product: IProductProps | undefined }) {
   return(
-    <section className="container xl:px-4 flex justify-center">
+    <section className="container xl:px-4 flex flex-col items-center min-h-[80vh]">
       <div 
         className="relative bg-white rounded-lg overflow-hidden whitespace-nowrap transition-all ease-in-out duration-200 text-base sm:text-lg lg:text-xl xl:text-xl flex w-full md:w-3/4 lg:w-1/2"
       >
@@ -17,7 +17,7 @@ export default function ProductView({ product }: { product: IProductProps | unde
         <img 
           src={product?.Img}
           alt={product?.Title}
-          className="w-full object-cover object-center rounded-tl-lg rounded-tr-lg aspect-square "
+          className="w-full object-cover object-center aspect-square "
         />
         <div className="flex flex-col justify-center p-4 mt-4">
           <h2 className="text-gray-900 font-medium sm:mb-2">{product?.Title}</h2>

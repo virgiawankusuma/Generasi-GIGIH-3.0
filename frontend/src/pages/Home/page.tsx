@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="container">
+    <main className="container min-h-[80vh]">
       <section className="mt-4 mb-8 flex flex-wrap gap-4 lg:gap-3 xl:gap-4">
         {
           !searchParams.get("category") &&

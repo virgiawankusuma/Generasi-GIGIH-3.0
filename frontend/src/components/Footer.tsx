@@ -8,7 +8,7 @@ export default function Footer() {
   }
   
   return (
-    <footer className="bg-black/10 absolute w-full flex items-center z-10 justify-beetwen p-4"
+    <footer className="bg-black absolute w-full flex items-center z-10 justify-beetwen p-4"
     >
       <div className="container">
         <div className="flex flex-wrap text-center text-white text-sm gap-y-3 items-center md:justify-between">
