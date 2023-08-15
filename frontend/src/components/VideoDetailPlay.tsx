@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import { IProductProps } from '../types/productProps';
 import { IVideoProps } from '../types/videoProps';
 import { FaEye, FaThumbsUp } from 'react-icons/fa';
@@ -10,6 +12,11 @@ interface IVideoDetailPlayProps {
 }
 
 export default function VideoDetailPlay({ video, products }: IVideoDetailPlayProps) {
+  const [videoUrl, setVideoUrl] = useState(video?.Url);
+  
+  useEffect(() => {
+    setVideoUrl(`${video?.Url}?controls=0&autoplay=1&showinfo=0&frameborder=0`);
+  }, [video?.Url]);
 
   return(
     <section className="container xl:px-4">
@@ -28,7 +35,7 @@ export default function VideoDetailPlay({ video, products }: IVideoDetailPlayPro
         </button>
         <iframe
           className="h-full w-full object-cover object-center m-auto min-h-screen sm:min-h-[90vh] md:min-h-[80vh]"
-          src={`${video?.Url}?controls=0&autoplay=1&showinfo=0&frameborder=0`}
+          src={videoUrl}
           title={video?.Title}
           allowFullScreen
         />
