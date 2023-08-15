@@ -52,7 +52,7 @@ This Dataasbe have 3 Collections with specific document:
 | Method | Path | Params | Description |
 | ------ | ---- | ------ | ----------- |
 | GET | /products | None | Returns all products in the system. |
-| GET | /products/:ProductID | ProductID=[string] | Returns the specified product. |
+| GET | /products/id/:ProductID | ProductID=[string] | Returns the specified product. |
 | GET | /products/:VideoID | VideoID=[string] | Returns the specified product from the specified video. |
 | GET | /videos | None | Returns all video thumbnails in the system. |
 | GET | /videos/:VideoID | VideoID=[string] | Returns the specified video thumbnail. |
@@ -106,7 +106,7 @@ This Dataasbe have 3 Collections with specific document:
       error 
     }
     ```
-## **GET /products/:ProductID**
+## **GET /products/id/:ProductID**
 ----
   Returns the specified product.
 * **URL Params**  
@@ -334,7 +334,7 @@ This Dataasbe have 3 Collections with specific document:
   ```
 # Demo
 To see the demo of this project, please visit this link
-[Generasi Gigih 3.0](https://generasi-gigih-3-0.vercel.app/)
+[Generasi Gigih 3.0](https://gg-3.vercel.app/)
   
 # How to run the project in local
 ## Backend
