@@ -46,8 +46,6 @@ const submitComment = async (req, res) => {
       VideoID,
     });
 
-    res.json(newComment);
-
     await newComment.save();
 
     res.status(201).json({
