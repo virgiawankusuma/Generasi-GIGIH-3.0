@@ -40,7 +40,7 @@ const submitComment = async (req, res) => {
       });
     }
 
-    const newComment = new comment({
+    const newComment = new commentSchema({
       Username,
       Comment,
       VideoID,
