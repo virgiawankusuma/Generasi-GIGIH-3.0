@@ -2,7 +2,8 @@
 1. [Database Structure](#database-structure)
 2. [API Structure](#api-structure)
 3. [List of API request and response](#list-api-request-and-response)
-4. [How to run the project](#how-to-run-the-project)
+4. [Demo](#demo)
+5. [How to run the project](#how-to-run-the-project)
 
 ---
 
@@ -53,6 +54,7 @@ This Dataasbe have 3 Collections with specific document:
 | GET | /products | None | Returns all products in the system. |
 | GET | /products/:VideoID | VideoID=[string] | Returns the specified product. |
 | GET | /videos | None | Returns all video thumbnails in the system. |
+| GET | /videos/:VideoID | VideoID=[string] | Returns the specified video thumbnail. |
 | GET | /comments | None | Returns all comments in the system. |
 | GET | /comments/:VideoID | VideoID=[string] | Returns the specified product. |
 | POST | /comments | None | Creates a new comment in the system. |
@@ -173,6 +175,28 @@ This Dataasbe have 3 Collections with specific document:
   }
   ```
 
+### **GET /videos/:VideoID**
+----
+  Returns the specified product.
+* **URL Params**  
+  *Required:* `VideoID=[string]`
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json  
+* **Success Response:** 
+* **Code:** 200  
+  **Content:**  `{ <video_object> }` 
+* **Error Response:**  
+  * **Code:** 500  
+  **Content:** 
+    ```
+    { 
+      message : "Error retrieving video", 
+      error
+    }
+    ```
+
 ## Comment List
 * Comment object
   ```javascript
@@ -275,9 +299,20 @@ This Dataasbe have 3 Collections with specific document:
     error 
   }
   ```
+# Demo
+To see the demo of this project, please visit this link
+[Generasi Gigih 3.0](https://generasi-gigih-3-0.vercel.app/)
   
-# How to run the project
-1. clone this repo with the specified branch name with the following command `git clone -b mid-term-full-stack-engineering <this-repo-url>`
-2. Run `npm install` to install all dependencies first.
-3. Create a `.env` file in the root directory of the project with `.env.example` as a template.
-4. Run `npm start` to start the server.
+# How to run the project in local
+## Backend
+1. Clone this repo with the specified branch name with the following command `git clone -b final-project-full-stack-engineering <this-repo-url>`
+2. cd into the project directory. `cd backend`
+3. Run `npm install` to install all dependencies first.
+4. Create a `.env` file in the root directory of the project with `.env.example` as a template.
+5. Run `npm run start` to start the server.
+
+## Frontend
+1. Back to the root directory of the project.
+2. cd into the project directory. `cd frontend`
+3. Run `npm install` to install all dependencies first.
+4. Run `npm run dev` to start the server.
