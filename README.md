@@ -52,7 +52,8 @@ This Dataasbe have 3 Collections with specific document:
 | Method | Path | Params | Description |
 | ------ | ---- | ------ | ----------- |
 | GET | /products | None | Returns all products in the system. |
-| GET | /products/:VideoID | VideoID=[string] | Returns the specified product. |
+| GET | /products/:ProductID | ProductID=[string] | Returns the specified product. |
+| GET | /products/:VideoID | VideoID=[string] | Returns the specified product from the specified video. |
 | GET | /videos | None | Returns all video thumbnails in the system. |
 | GET | /videos/:VideoID | VideoID=[string] | Returns the specified video thumbnail. |
 | GET | /comments | None | Returns all comments in the system. |
@@ -60,7 +61,7 @@ This Dataasbe have 3 Collections with specific document:
 | POST | /comments | None | Creates a new comment in the system. |
 
 # List API Request and Response
-## Product List
+## Products
 * Product object
   ```javascript
   {
@@ -105,13 +106,11 @@ This Dataasbe have 3 Collections with specific document:
       error 
     }
     ```
-
-
-### **GET /products/:VideoID**
+## **GET /products/:ProductID**
 ----
   Returns the specified product.
 * **URL Params**  
-  *Required:* `VideoID=[string]`
+  *Required:* `ProductID=[string]`
 * **Data Params**  
   None
 * **Headers**  
@@ -129,8 +128,42 @@ This Dataasbe have 3 Collections with specific document:
     }
     ```
 
-## Video List
-* Video List object
+
+### **GET /products/:VideoID**
+----
+  Returns the specified product from the specified video.
+* **URL Params**  
+  *Required:* `VideoID=[string]`
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json  
+* **Success Response:** 
+* **Code:** 200  
+  **Content:** 
+  ```
+  {
+    products: [
+            {<product_object>},
+            {<product_object>},
+            {<product_object>},
+            {<product_object>},
+            {<product_object>},
+          ]
+  }
+  ```
+* **Error Response:**  
+  * **Code:** 500  
+  **Content:** 
+    ```
+    { 
+      message : "Error retrieving product from video",
+      error
+    }
+    ```
+
+## Videos
+* Videos object
   ```javascript
   {
     VideoID: string
@@ -197,8 +230,8 @@ This Dataasbe have 3 Collections with specific document:
     }
     ```
 
-## Comment List
-* Comment object
+## Comments
+* Comments object
   ```javascript
   {
     Username: string
