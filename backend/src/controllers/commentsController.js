@@ -1,5 +1,5 @@
 const comment = require('../models/Comments');
-const videoThumbnailList = require('../models/Videos');
+const videoList = require('../models/Videos');
 
 const getComments = async (req, res) => {
   try {
@@ -17,8 +17,8 @@ const getCommentByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
 
-    const videoThumbnail = await videoThumbnailList.findOne({ VideoID });
-    const comments = await comment.find({ VideoID: videoThumbnail.VideoID });
+    const video = await videoList.findOne({ VideoID });
+    const comments = await comment.find({ VideoID: video.VideoID });
 
     res.status(200).json(comments);
     

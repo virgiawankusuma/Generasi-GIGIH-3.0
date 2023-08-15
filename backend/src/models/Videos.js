@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const videosSchema = new mongoose.Schema({
+const videoSchema = new mongoose.Schema({
   VideoID: { 
     type: String, 
     required: [true, 'Video ID is required'],
@@ -31,6 +31,6 @@ const videosSchema = new mongoose.Schema({
   },
 });
 
-const VideoThumbnail = mongoose.model('videos', videosSchema);
+const Video = mongoose.model('videos', videoSchema);
 
-module.exports = VideoThumbnail;
+module.exports = Video;
