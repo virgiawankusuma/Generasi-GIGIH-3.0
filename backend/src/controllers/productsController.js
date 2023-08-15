@@ -1,9 +1,9 @@
-const product = require('../models/Products');
-const videos = require('../models/Videos');
+const productsSchema = require('../models/Products');
+const videosSchema = require('../models/Videos');
 
 const getProducts = async (req, res) => {
   try {
-    const products = await product.find({});
+    const products = await productsSchema.find({});
     res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ 
@@ -17,7 +17,7 @@ const getProductByID = async (req, res) => {
   try {
     const { ProductID } = req.params;
 
-    const product = await product.findOne({ ProductID });
+    const product = await productsSchema.findOne({ ProductID });
     res.status(200).json(product);
 
   } catch (error) {
@@ -32,8 +32,8 @@ const getProductByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
 
-    const video = await videos.findOne({ VideoID });
-    const products = await product.find({ VideoID: video.VideoID });
+    const video = await videosSchema.findOne({ VideoID });
+    const products = await productsSchema.find({ VideoID: video.VideoID });
 
     res.status(200).json(products);
 

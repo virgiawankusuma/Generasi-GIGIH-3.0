@@ -1,9 +1,9 @@
-const comment = require('../models/Comments');
-const videos = require('../models/Videos');
+const commentSchema = require('../models/Comments');
+const videosSchema = require('../models/Videos');
 
 const getComments = async (req, res) => {
   try {
-    const comments = await comment.find({});
+    const comments = await commentSchema.find({});
     res.status(200).json(comments);
   } catch (error) {
     res.status(500).json({ 
@@ -17,8 +17,8 @@ const getCommentByVideoID = async (req, res) => {
   try {
     const { VideoID } = req.params;
 
-    const video = await videos.findOne({ VideoID });
-    const comments = await comment.find({ VideoID: video.VideoID });
+    const video = await videosSchema.findOne({ VideoID });
+    const comments = await commentSchema.find({ VideoID: video.VideoID });
 
     res.status(200).json(comments);
     
