@@ -6,7 +6,10 @@ const getProducts = async (req, res) => {
     const products = await product.find({});
     res.status(200).json(products);
   } catch (error) {
-    res.status(500).json({ message: 'Error retrieving products', error });
+    res.status(500).json({ 
+      message: 'Error retrieving products', 
+      error 
+    });
   }
 }
 
@@ -18,7 +21,10 @@ const getProductByID = async (req, res) => {
     res.status(200).json(product);
 
   } catch (error) {
-    res.status(500).json({ message: 'Error retrieving product', error });
+    res.status(500).json({ 
+      message: 'Error retrieving product', 
+      error 
+    });
   }
 }
 
@@ -32,7 +38,10 @@ const getProductByVideoID = async (req, res) => {
     res.status(200).json(products);
 
   } catch (error) {
-    res.status(500).json({ message: 'Error retrieving product', error });
+    res.status(500).json({ 
+      message: 'Error retrieving product', 
+      error 
+    });
   }
 }
 
