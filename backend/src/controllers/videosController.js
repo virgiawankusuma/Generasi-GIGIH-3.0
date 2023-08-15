@@ -14,9 +14,11 @@ const getVideos = async (req, res) => {
 
 const getVideoById = async (req, res) => {
   try {
-    const { id } = req.params;
-    const video = await Videos.findById(id);
+    const { VideoID } = req.params;
+
+    const video = await Videos.findOne({ VideoID });
     res.status(200).json(video);
+    
   } catch (error) {
     res.status(500).json({
       message: 'Error retrieving Video',
