@@ -5,7 +5,7 @@ import getProductByVideoID from '../helpers/getProductByVideoID';
 import getCommentByVideoID from '../helpers/getCommentByVideoID';
 import submitComment from '../helpers/submitComment';
 
-import VideoDetailNav from './VideoDetailNav';
+import NavDetail from './NavDetail';
 import VideoDetailPlay from './VideoDetailPlay';
 import VideoDetailComments from './VideoDetailComments';
 
@@ -65,7 +65,7 @@ export default function VideoDetail({ videoId }: { videoId: string | undefined }
   return (
     <>
       {error && <p>{error}</p>}
-      <VideoDetailNav 
+      <NavDetail 
         title={video?.Title}
         store={video?.Store}
       />

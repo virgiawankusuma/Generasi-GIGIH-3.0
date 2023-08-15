@@ -9,7 +9,7 @@ export default function Card({ videoID, title, thumbnailUrl, store, category, vi
   return (
     <Link 
       className="w-[calc((100%/2)-0.5rem)] bg-primary sm:w-[calc((100%/3)-0.7rem)] md:w-[calc((100%/4)-0.8rem)] lg:w-[calc((100%/5)-0.6rem)] xl:w-[calc((100%/6)-0.85rem)] relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[102%] group transition-all duration-300 ease-in-out"
-      to={`/videos/${videoID}`}
+      to={`/video/${videoID}`}
     >
       <img 
         src={thumbnailUrl || defaultThumb} 

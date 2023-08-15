@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './pages/Home/page';
 import Videos from './pages/Videos/page';
+import Product from './pages/Product/page';
 
 export default function App() {
   const location = useLocation();
@@ -13,8 +14,11 @@ export default function App() {
       { !VideoId && <Navigation /> }
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="videos">
+        <Route path="video">
           <Route path=":VideoId" element={<Videos />} />
+        </Route>
+        <Route path="product">
+          <Route path=":ProductId" element={<Product />} />
         </Route>
       </Routes>
     </>

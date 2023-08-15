@@ -33,14 +33,14 @@ export default function Navigation() {
           All
         </Link>
         <Link
-          to="/?category=populer"
+          to="/?category=popular"
           className={isActive('popular')}
           title="Popular"
         >
           Popular
         </Link>
         <Link
-          to="/?category=terbaru"
+          to="/?category=latest"
           className={isActive('latest')}
           title="Latest"
         >

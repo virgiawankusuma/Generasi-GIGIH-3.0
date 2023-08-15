@@ -1,7 +1,7 @@
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-export default function VideoDetailNav({ title, store }: { title: string | undefined, store: string | undefined }) {
+export default function NavDetail({ title, store }: { title: string | undefined, store: string | undefined }) {
   return (
     <header className="container xl:px-4">
       <div
