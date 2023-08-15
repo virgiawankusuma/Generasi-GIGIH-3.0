@@ -12,7 +12,7 @@ export default function NavBrand({ searchParams }: { searchParams: URLSearchPara
         <FaAngleLeft />
       </Link>
       <h1 
-        className="text-2xl text-white font-bold capitalize max-w-[120px] sm:max-w-[200px] md:max-w-full truncate"
+        className="text-lg sm:text-xl md:text-2xl text-white font-bold capitalize max-w-[120px] sm:max-w-[200px] md:max-w-full truncate"
       >
         {
           searchParams.get('category') 
