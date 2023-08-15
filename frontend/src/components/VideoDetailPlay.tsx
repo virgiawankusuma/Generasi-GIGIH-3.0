@@ -12,14 +12,18 @@ interface IVideoDetailPlayProps {
 }
 
 export default function VideoDetailPlay({ video, products }: IVideoDetailPlayProps) {
-  const [videoUrl, setVideoUrl] = useState<string | undefined>(video?.Url);
+  const [videoUrl, setVideoUrl] = useState(video?.Url);
+  
+  useEffect(() => {
+    setVideoUrl(`${video?.Url}?controls=0&autoplay=1&showinfo=0&frameborder=0`);
+  }, [video?.Url]);
 
   useEffect(() => {
     if (video) {
       setVideoUrl(`${video.Url}?controls=0&autoplay=1&showinfo=0&frameborder=0`);
     }
   }, [video]);
-  
+
   return(
     <section className="container xl:px-4">
       <div className="relative rounded-xl overflow-hidden shadow-lg mb-5 bg-black">
