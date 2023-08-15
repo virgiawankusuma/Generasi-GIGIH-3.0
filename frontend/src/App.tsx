@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home/page';
 import Videos from './pages/Videos/page';
 import Product from './pages/Product/page';
+import Footer from './components/Footer';
 
 export default function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ export default function App() {
           <Route path=":ProductId" element={<Product />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   )
 }
