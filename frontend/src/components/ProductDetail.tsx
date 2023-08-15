@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import getProductByID from '../helpers/getProductById';
+import getProductByID from '../helpers/getProductByID';
 
 import NavDetail from './NavDetail';
 
