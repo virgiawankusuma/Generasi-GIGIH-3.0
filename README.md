@@ -1,18 +1,18 @@
 # Table of Contents
 1. [Database Structure](#database-structure)
 2. [API Structure](#api-structure)
-3. [List of API request and response](#list-api-request-and-response)
+3. [List of API requests and response](#list-of-api-requests-and-response)
 4. [Demo](#demo)
-5. [How to run the project](#how-to-run-the-project)
+5. [How to run the project locally](#how-to-run-the-project-locally)
 
 ---
 
 # Database Structure
-This Dataasbe have 3 Collections with specific document:
+This Dataasbe has 3 Collections with the specific document:
 ## Video Thumbnails
 ```javascript
 {
-  _id: ObjectId // Auto generated
+  _id: ObjectId // Auto-generated
   VideoID: string
   Title: string
   Url: string
@@ -60,7 +60,7 @@ This Dataasbe have 3 Collections with specific document:
 | GET | /comments/:VideoID | VideoID=[string] | Returns the specified product. |
 | POST | /comments | None | Creates a new comment in the system. |
 
-# List API Request and Response
+# List of API requests and response
 ## Products
 * Product object
   ```javascript
@@ -102,7 +102,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:** 
     ```
     {
-      message : "Error retrieving products", 
+      message: "Error retrieving products", 
       error 
     }
     ```
@@ -123,7 +123,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:** 
     ```
     { 
-      message : "Error retrieving product", 
+      message: "Error retrieving product", 
       error
     }
     ```
@@ -157,7 +157,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:** 
     ```
     { 
-      message : "Error retrieving product from video",
+      message: "Error retrieving product from the video",
       error
     }
     ```
@@ -178,7 +178,7 @@ This Dataasbe have 3 Collections with specific document:
   ```
 ### **GET /videos**
 ----
-  Returns all video in the system.
+  Returns all videos in the system.
 * **URL Params**  
   None
 * **Data Params**  
@@ -204,7 +204,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:** 
   ```
   { 
-    message : "Error retrieving video thumbnails",
+    message: "Error retrieving video thumbnails",
     error
   }
   ```
@@ -226,7 +226,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:** 
     ```
     { 
-      message : "Error retrieving video", 
+      message: "Error retrieving video", 
       error
     }
     ```
@@ -269,7 +269,7 @@ This Dataasbe have 3 Collections with specific document:
   **Content:** 
     ```
     { 
-      message : "Error retrieving comments", 
+      message: "Error retrieving comments", 
       error 
     }
     ```
@@ -291,7 +291,7 @@ This Dataasbe have 3 Collections with specific document:
   * **Content:** 
     ```
     {
-      message : "Error retrieving comment", 
+      message: "Error retrieving comment", 
       error 
     }
     ```
@@ -324,12 +324,12 @@ This Dataasbe have 3 Collections with specific document:
   ```
 * **Error Response:**
 * **Code:** 400  
-  **Content:** `{ message : "Username, Comment, and VideoID are required fields." }`
+  **Content:** `{ message: "Username, Comment, and VideoID are required fields." }`
 * **Code:** 500
 * **Content:** 
   ```
   { 
-    message: "Failed to submitt comment", 
+    message: "Failed to submit comment", 
     error 
   }
   ```
@@ -337,12 +337,12 @@ This Dataasbe have 3 Collections with specific document:
 To see the demo of this project, please visit this link
 [Generasi Gigih 3.0](https://gg-3.vercel.app/)
   
-# How to run the project in local
+# How to run the project locally
 ## Backend
 1. Clone this repo with the specified branch name with the following command `git clone -b final-project-full-stack-engineering <this-repo-url>`
 2. cd into the project directory. `cd backend`
 3. Run `npm install` to install all dependencies first.
-4. Create a `.env` file in the root directory of the project with `.env.example` as a template.
+4. Create a `.env` file in the project's root directory with `.env.example` as a template.
 5. Run `npm run start` to start the server.
 
 ## Frontend
